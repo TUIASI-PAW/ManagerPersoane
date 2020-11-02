@@ -16,7 +16,7 @@ export class AdaugarePersoaneComponent implements OnInit, OnDestroy {
 
   private saveSubscription: Subscription;
 
-  constructor(private readonly service: PersoaneService, private readonly router: Router) { }
+  constructor(private readonly persoaneService: PersoaneService, private readonly router: Router) { }
 
   ngOnInit() {
     this.createForm();
@@ -27,7 +27,7 @@ export class AdaugarePersoaneComponent implements OnInit, OnDestroy {
   }
 
   onSave() {
-    this.saveSubscription = this.service.save(this.persoanaForm.value).subscribe((response: any) => {
+    this.saveSubscription = this.persoaneService.save(this.persoanaForm.value).subscribe((response: any) => {
       console.log(response);
       // this.persoanaForm.reset();
       this.router.navigate(['/persoane']);
