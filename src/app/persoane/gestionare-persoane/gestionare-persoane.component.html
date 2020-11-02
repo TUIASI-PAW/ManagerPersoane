@@ -1,5 +1,9 @@
 <p>gestionare-persoane works!</p>
 
+<div>
+    <button (click)="onAddClick()">Add</button>
+</div>
+
 <ng-container *ngFor="let persoana of persoane">
     <div>{{persoana.prenume}} {{persoana.nume}}</div>
     <div>{{persoana.email}}</div>

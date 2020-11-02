@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 import { PersoaneService } from '../persoane.service';
 import { Persoana } from '../models';
@@ -14,7 +15,7 @@ export class GestionarePersoaneComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
   persoane: Persoana[];
 
-  constructor(private persoaneService: PersoaneService) { }
+  constructor(private persoaneService: PersoaneService, private readonly router: Router) { }
 
   ngOnInit() {
     this.getPersoane();
@@ -29,4 +30,10 @@ export class GestionarePersoaneComponent implements OnInit, OnDestroy {
       this.persoane = persoane;
     });
   }
+
+  onAddClick() {
+    this.router.navigate(['persoane/new']);
+  }
+
+
 }
