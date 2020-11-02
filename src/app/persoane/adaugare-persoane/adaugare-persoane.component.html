@@ -14,7 +14,7 @@
     </div>
     <div>
         <label>Dată:</label>
-        <input type="datetime-local" [value]="persoanaForm.get('data').value | date: 'yyyy-MM-ddTHH:mm'" formControlName="data">
+        <input type="datetime-local" [value]="persoanaForm.get('dataInregistrare').value | date: 'yyyy-MM-ddTHH:mm'" formControlName="dataInregistrare">
     </div>
     <button type="submit" [disabled]="!persoanaForm.valid">Submit</button>
 </form>

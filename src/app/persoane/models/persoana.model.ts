@@ -3,5 +3,5 @@ export class Persoana {
     nume: string;
     prenume: string;
     email: string;
-    data: Date;
+    dataInregistrare: Date;
 }

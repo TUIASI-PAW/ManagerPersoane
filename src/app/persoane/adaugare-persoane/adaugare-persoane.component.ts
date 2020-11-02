@@ -40,7 +40,7 @@ export class AdaugarePersoaneComponent implements OnInit, OnDestroy {
       prenume: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       /*price: new FormControl(0, [Validators.required, Validators.min(9.99)]),*/
-      data: new FormControl(new Date(), Validators.required),
+      dataInregistrare: new FormControl(new Date(), Validators.required),
     }
     );
   }
