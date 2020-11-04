@@ -9,7 +9,8 @@ import { environment } from '../../environments/environment'; // accesăm variab
   providedIn: 'root'
 })
 export class PersoaneService {
-  private url = `${environment.apiUrl}persoane`;
+  // localhost:4300/api/persoane
+  private url: string = `${environment.apiUrl}persoane`;
 
   constructor(private httpClient: HttpClient) { }
 

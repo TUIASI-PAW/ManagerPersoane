@@ -16,7 +16,12 @@ export class AdaugarePersoaneComponent implements OnInit, OnDestroy {
 
   private saveSubscription: Subscription;
 
-  constructor(private readonly persoaneService: PersoaneService, private readonly router: Router) { }
+  private readonly persoaneService: PersoaneService;
+  private readonly router: Router;
+  constructor(persoaneService: PersoaneService, router: Router) {
+    this.persoaneService = persoaneService;
+    this.router = router;
+  }
 
   ngOnInit() {
     this.createForm();
@@ -36,13 +41,13 @@ export class AdaugarePersoaneComponent implements OnInit, OnDestroy {
 
   private createForm() {
     this.persoanaForm = new FormGroup({
-      nume: new FormControl('', Validators.required),
+      nume: new FormControl('Ionel', Validators.required),
       prenume: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
-      /*price: new FormControl(0, [Validators.required, Validators.min(9.99)]),*/
       dataInregistrare: new FormControl(new Date(), Validators.required),
     }
     );
   }
+  /*price: new FormControl(0, [Validators.required, Validators.min(9.99)]),*/
 
 }
