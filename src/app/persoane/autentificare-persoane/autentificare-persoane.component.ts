@@ -12,7 +12,7 @@ export class AutentificarePersoaneComponent implements OnInit {
 
   persoanaAuthForm: FormGroup;
 
-  constructor(private persoaneAuthService: PersoaneAuthService, private readonly router: Router) {
+  constructor(private persoaneAuthService: PersoaneAuthService) {
 
   }
 
