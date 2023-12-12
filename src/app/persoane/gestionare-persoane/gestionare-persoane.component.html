@@ -7,6 +7,10 @@
     <button (click)="onAddClick()">Add</button>
 </div>
 
+<div>
+    <button (click)="onLoginClick()">Login</button>
+</div>
+
 <ng-container *ngFor="let persoana of persoane">
     <div>{{persoana.prenume}} {{persoana.nume}}</div>
     <div>{{persoana.email}}</div>

@@ -35,5 +35,8 @@ export class GestionarePersoaneComponent implements OnInit, OnDestroy {
     this.router.navigate(['persoane/new']);
   }
 
+  onLoginClick() {
+    this.router.navigate(['persoane/auth']);
+  }
 
 }

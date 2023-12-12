@@ -1,0 +1,11 @@
+<form [formGroup]="persoanaAuthForm" (ngSubmit)="onLogin()">
+    <div>
+        <label>Username:</label>
+        <input type="text" formControlName="username"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" formControlName="password"/>
+    </div>    
+    <button type="submit" [disabled]="!persoanaAuthForm.valid">Login</button>
+</form>
