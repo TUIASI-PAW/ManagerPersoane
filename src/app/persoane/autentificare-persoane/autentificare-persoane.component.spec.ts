@@ -24,4 +24,16 @@ describe('AutentificarePersoaneComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render username in a span tag with id="usernameDisplay" ', () => {    
+    fixture.detectChanges();
+
+    const compiled = fixture.debugElement.nativeElement;
+    const app = fixture.debugElement.componentInstance;
+    app.persoanaAuthForm.value['username'] = "Ana";
+    fixture.detectChanges();
+    expect(compiled.querySelector('span').textContent).toContain('Ana');
+  });
+
+
 });
